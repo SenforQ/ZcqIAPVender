@@ -1,0 +1,6 @@
+framework module ZcqIAPVender {
+  umbrella header "ZcqIAPVender-umbrella.h"
+
+  export *
+  module * { export * }
+}

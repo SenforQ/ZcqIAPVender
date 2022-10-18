@@ -24,8 +24,8 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/Z cq/ZcqIAPVender'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Z cq' => '494313298@qq.com' }
-  s.source           = { :git => 'https://github.com/Z cq/ZcqIAPVender.git', :tag => s.version.to_s }
+  s.author           = { 'SenforQ' => '494313298@qq.com' }
+  s.source           = { :git => 'https://github.com/SenforQ/ZcqIAPVender.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
