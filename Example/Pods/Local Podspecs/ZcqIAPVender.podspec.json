@@ -9,14 +9,24 @@
     "file": "LICENSE"
   },
   "authors": {
-    "Z cq": "494313298@qq.com"
+    "SenforQ": "494313298@qq.com"
   },
   "source": {
-    "git": "https://github.com/Z cq/ZcqIAPVender.git",
+    "git": "https://github.com/SenforQ/ZcqIAPVender.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "ZcqIAPVender/Classes/**/*"
+  "source_files": "ZcqIAPVender/Classes/**/*",
+  "resource_bundles": {
+    "ZcqIAPVender": [
+      "ZcqIAPVender/Assets/*.bundle"
+    ]
+  },
+  "dependencies": {
+    "AFNetworking": [
+      "~> 4.0.1"
+    ]
+  }
 }

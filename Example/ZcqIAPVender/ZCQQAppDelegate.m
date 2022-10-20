@@ -7,12 +7,60 @@
 //
 
 #import "ZCQQAppDelegate.h"
-
+#import "ZCQDemoViewController.h"
+#import <AFNetworking/AFNetworking.h>
+#import <ZcqIAPVender/ZcqIAPVender.h>
 @implementation ZCQQAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    //配置内购清单.
+    [ZcqIAPVenderConfig shared];
+    [ZcqIAPVenderConfig shared].ipaIdArrays = @[@"com.demoweek.ceshi",@"com.demomonth.ceshi",@"com.demoyear.ceshi"];
+    [ZcqIAPVenderConfig shared].ipaAppSecretkey = @"e0c5fafbe363427e8bc9d4165b907ff1";
+    [[ZcqIAPVenderConfig shared] showConfigMessage];
+    
+    // 1.获得网络监控的管理者
+    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
+    // 2.设置网络状态改变后的处理
+    [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        // 当网络状态改变了, 就会调用这个block
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown: // 未知网络
+                NSLog(@"未知网络");
+                break;
+                
+            case AFNetworkReachabilityStatusNotReachable: // 没有网络(断网)
+                NSLog(@"没有网络(断网)");
+                break;
+                
+            case AFNetworkReachabilityStatusReachableViaWWAN: // 手机自带网络
+                NSLog(@"手机自带网络");
+                //配置
+                [[ZcqApiVenderManager shared] defaultManager];
+                break;
+                
+            case AFNetworkReachabilityStatusReachableViaWiFi: // WIFI
+                NSLog(@"WIFI");
+                //配置
+                [[ZcqApiVenderManager shared] defaultManager];
+                break;
+        }
+    }];
+    // 3.开始监控
+    [mgr startMonitoring];
+    
+    //初始化window
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    ZCQDemoViewController* vc = [[ZCQDemoViewController alloc]init];
+    UINavigationController* navi = [[UINavigationController alloc]initWithRootViewController:vc];
+    self.window.rootViewController = navi;
+    
+    
+    
     return YES;
 }
 

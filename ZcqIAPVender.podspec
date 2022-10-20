@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZcqIAPVender'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of ZcqIAPVender.'
 
 # This description is used to generate tags and improve search results.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Z cq/ZcqIAPVender'
+  s.homepage         = 'https://github.com/SenforQ/ZcqIAPVender'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'SenforQ' => '494313298@qq.com' }
@@ -32,11 +32,11 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'ZcqIAPVender/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'ZcqIAPVender' => ['ZcqIAPVender/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'ZcqIAPVender' => ['ZcqIAPVender/Assets/*.bundle']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.dependency 'AFNetworking', '~> 4.0.1'
 end

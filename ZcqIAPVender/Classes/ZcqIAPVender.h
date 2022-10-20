@@ -7,6 +7,7 @@
 
 #ifndef ZcqIAPVender_h
 #define ZcqIAPVender_h
-
+#import "ZcqIAPVenderConfig.h"
+#import "ZcqApiVenderManager.h"
 
 #endif /* ZcqIAPVender_h */

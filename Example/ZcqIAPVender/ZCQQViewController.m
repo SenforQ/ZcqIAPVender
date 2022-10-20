@@ -7,7 +7,7 @@
 //
 
 #import "ZCQQViewController.h"
-
+#import <ZcqIAPVender/ZcqIAPVender.h>
 @interface ZCQQViewController ()
 
 @end
@@ -17,7 +17,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+//	// Do any additional setup after loading the view, typically from a nib.
+//    [ZcqIAPVenderConfig shared];
+//    [ZcqApiVenderManager shared];
+//    NSLog(@"VC获取内购id:%@",[ZcqIAPVenderConfig shared].ipaIdArrays);
+//    NSLog(@"订单号:%@",[[ZcqIAPVenderConfig shared] getIAPInternalPurchaseVoucherID]);
+//    NSLog(@"VIPStatus:%@",[[ZcqIAPVenderConfig shared] getIsVIPStatus]?@"YES":@"NO");
+//    [ZcqApiVenderManager inPurchase:@"com.demoweek.ceshi" withBuySuccessfulBlock:^{
+//        NSLog(@"购买成功.");
+//    }];
 }
 
 - (void)didReceiveMemoryWarning
