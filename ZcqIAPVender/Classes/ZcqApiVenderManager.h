@@ -22,7 +22,12 @@ typedef void(^BuySuccessfulBlock)(void);
 -(NSString*)getProductIDPrice:(NSString*)ProductID;
 //判断是否获取到价格列表.
 -(BOOL)isGetProducts;
-
+//是否获取到所有价格.
+-(BOOL)isInitComplete;
+//恢复购买
++(void)restorePurchase;
+//是否获取到网络.
+@property (nonatomic, assign)BOOL isNetWorking;
 @end
 
 NS_ASSUME_NONNULL_END

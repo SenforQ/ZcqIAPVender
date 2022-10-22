@@ -9,5 +9,5 @@
 #define ZcqIAPVender_h
 #import "ZcqIAPVenderConfig.h"
 #import "ZcqApiVenderManager.h"
-
+#import "MvToast.h"
 #endif /* ZcqIAPVender_h */

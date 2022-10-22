@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy)NSArray* ipaIdArrays;
 //默认ipaAppSecretkey = @"e0c5fafbe363427e8bc9d4165b907ff1"
 @property (nonatomic, copy)NSString* ipaAppSecretkey;
+//默认yinSiURL = @"https://shimo.im/docs/w6QwyJcDVrx66j3Q"
+@property (nonatomic, copy)NSString* yinSiURL;
+//默认dingGouURL = @"https://shimo.im/docs/w6QwyJcDVrx66j3Q"
+@property (nonatomic, copy)NSString* dingGouURL;
 //IAPInternalPurchaseVoucherID（订单凭证）
 -(NSString*)getIAPInternalPurchaseVoucherID;
 //是否为VIP

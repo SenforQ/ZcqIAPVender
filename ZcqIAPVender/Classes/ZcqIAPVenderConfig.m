@@ -30,6 +30,8 @@ static ZcqIAPVenderConfig * _defaultManager = nil;
     if (self = [super init]) {
         _InternalPurchaseVoucherID = [[NSUserDefaults standardUserDefaults] objectForKey:@"InternalPurchaseVoucherID"];
         _zcq_VipRepresentation = [[NSUserDefaults standardUserDefaults] boolForKey:@"MemberRepresentation"];
+        _dingGouURL = @"https://shimo.im/docs/w6QwyJcDVrx66j3Q";
+        _yinSiURL = @"https://shimo.im/docs/w6QwyJcDVrx66j3Q";
     }
     return self;
 }
@@ -42,7 +44,7 @@ static ZcqIAPVenderConfig * _defaultManager = nil;
     NSLog(@"IAPId数据配置（内购ID）：%@",_ipaIdArrays);
     NSLog(@"IAPAppSecretkey（密钥）：%@",_ipaAppSecretkey);
     NSLog(@"IAPInternalPurchaseVoucherID（订单凭证）：%@",_InternalPurchaseVoucherID);
-    NSLog(@"IAP开通会员（密钥）：%@",_zcq_VipRepresentation?@"YES":@"NO");
+    NSLog(@"IAP开通会员：%@",_zcq_VipRepresentation?@"YES":@"NO");
     NSLog(@"----内购配置完成----");
 #else
 #endif

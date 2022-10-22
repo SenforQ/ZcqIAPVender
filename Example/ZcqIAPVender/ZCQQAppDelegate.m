@@ -59,8 +59,6 @@
     UINavigationController* navi = [[UINavigationController alloc]initWithRootViewController:vc];
     self.window.rootViewController = navi;
     
-    
-    
     return YES;
 }
 

@@ -34,6 +34,7 @@ static BOOL _isInitComplete = NO;
 
 -(instancetype)init{
     if (self = [super init]) {
+
     }
     return self;
 }
@@ -195,5 +196,9 @@ static BOOL _isInitComplete = NO;
         [MvToast showSuccessWithMessage:@"未查询到订阅记录"];
     }];
     
+}
+
+-(BOOL)isInitComplete{
+    return _isInitComplete;
 }
 @end
