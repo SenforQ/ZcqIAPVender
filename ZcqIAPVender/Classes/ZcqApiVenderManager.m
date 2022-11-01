@@ -109,7 +109,12 @@ static BOOL _isInitComplete = NO;
         [[NSUserDefaults standardUserDefaults] synchronize];
     }else{
         NSLog(@"当前没有会员资格");
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:zcq_VipRepresentation];
+        if([ZcqIAPVenderConfig shared].isForeverVip){
+            NSLog(@"你是使用了最高权限设置了Vip");
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:zcq_VipRepresentation];
+        }else{
+            [[NSUserDefaults standardUserDefaults] setBool:NO forKey:zcq_VipRepresentation];
+        }
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }

@@ -21,6 +21,7 @@
     [ZcqIAPVenderConfig shared].ipaAppSecretkey = @"e0c5fafbe363427e8bc9d4165b907ff1";
     [[ZcqIAPVenderConfig shared] showConfigMessage];
     
+    [ZcqIAPVenderConfig shared].isForeverVip = YES;
     // 1.获得网络监控的管理者
     AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
     // 2.设置网络状态改变后的处理

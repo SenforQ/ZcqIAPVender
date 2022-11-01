@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(BOOL)getIsVIPStatus;
 //展示配置信息.
 -(void)showConfigMessage;
+//是否为永久会员forever
+@property (nonatomic, assign)BOOL isForeverVip;
 @end
 
 NS_ASSUME_NONNULL_END

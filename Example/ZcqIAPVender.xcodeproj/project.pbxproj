@@ -524,10 +524,12 @@
 			baseConfigurationReference = EF3D1339DA05FC9D59D2EDED /* Pods-ZcqIAPVender_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 6Y6Y4BKWTX;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZcqIAPVender/ZcqIAPVender-Prefix.pch";
 				INFOPLIST_FILE = "ZcqIAPVender/ZcqIAPVender-Info.plist";
+				MARKETING_VERSION = 0.2.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bangong.wxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -541,10 +543,12 @@
 			baseConfigurationReference = A49AD6F050E460903A6595A7 /* Pods-ZcqIAPVender_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 6Y6Y4BKWTX;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZcqIAPVender/ZcqIAPVender-Prefix.pch";
 				INFOPLIST_FILE = "ZcqIAPVender/ZcqIAPVender-Info.plist";
+				MARKETING_VERSION = 0.2.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bangong.wxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";

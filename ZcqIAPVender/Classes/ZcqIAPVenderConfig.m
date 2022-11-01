@@ -51,9 +51,11 @@ static ZcqIAPVenderConfig * _defaultManager = nil;
 }
 
 -(NSString*)getIAPInternalPurchaseVoucherID{
+    _defaultManager.InternalPurchaseVoucherID = [[NSUserDefaults standardUserDefaults] objectForKey:@"InternalPurchaseVoucherID"];
     return _defaultManager.InternalPurchaseVoucherID?_defaultManager.InternalPurchaseVoucherID:@"";
 }
 -(BOOL)getIsVIPStatus{
+    _defaultManager.zcq_VipRepresentation = [[NSUserDefaults standardUserDefaults] boolForKey:@"MemberRepresentation"];
     return _defaultManager.zcq_VipRepresentation;
 }
 @end
